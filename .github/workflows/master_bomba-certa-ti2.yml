@@ -35,7 +35,7 @@ jobs:
     needs: build
     environment:
       name: 'Production'
-      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+      url: 'https://bomba-certa-ti2.azurewebsites.net/'
 
     steps:
       - name: Download artifact from build job
@@ -49,5 +49,5 @@ jobs:
         with:
           app-name: 'bomba-certa-ti2'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D51559884F014D88B6146295AC53BAE3 }}
+          publish-profile: AZUREAPPSERVICE_PUBLISHPROFILE_D51559884F014D88B6146295AC53BAE3
           package: '*.jar'
