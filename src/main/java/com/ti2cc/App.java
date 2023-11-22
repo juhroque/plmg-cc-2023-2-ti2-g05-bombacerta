@@ -42,7 +42,7 @@ public class App {
      */
     public static void inicioPage(){
         get("/inicio", (request, response) -> {
-            return App.getPage("Codigo\\bombacerta\\src\\main\\java\\com\\ti2cc\\resources\\public\\index.html");
+            return App.getPage("plmg-cc-2023-2-ti2-g05-bombacerta\\src\\main\\java\\com\\ti2cc\\resources\\public\\index.html");
         });
     }
 
@@ -58,7 +58,7 @@ public class App {
         post("usuario/login", (request, response) -> {
             int userId = (int) usuarioService.login(request, response);
             if (response.status() == 200) {
-                 return (App.getPage("Codigo\\bombacerta\\src\\main\\java\\com\\ti2cc\\resources\\public\\login.html") +
+                 return (App.getPage("plmg-cc-2023-2-ti2-g05-bombacerta\\src\\main\\java\\com\\ti2cc\\resources\\public\\login.html") +
                 "<html><head></head><body><script>localStorage.setItem(\"logado\", \""+ userId + "\"); </script></body></html>");
             } else {
                 response.redirect("/inicio/erroLogin");
@@ -67,7 +67,7 @@ public class App {
         });
 
         get("/inicio/erroLogin", (request, response) -> {
-            return (App.getPage("Codigo\\bombacerta\\src\\main\\java\\com\\ti2cc\\resources\\public\\index.html")) +
+            return (App.getPage("plmg-cc-2023-2-ti2-g05-bombacerta\\src\\main\\java\\com\\ti2cc\\resources\\public\\index.html")) +
                     "<html><head></head><body><script> alert('E-mail ou senha incorretos.'); window.location.href = 'http://localhost:1111/inicio'    </script></body></html>";
         });
     }
@@ -79,7 +79,7 @@ public class App {
      */
     public static void postoActions(){
         get("/posto/cadastro", (request, response) -> {
-            return App.getPage("Codigo\\bombacerta\\src\\main\\java\\com\\ti2cc\\resources\\public\\addPosto.html");
+            return App.getPage("plmg-cc-2023-2-ti2-g05-bombacerta\\src\\main\\java\\com\\ti2cc\\resources\\public\\addposto.html");
         });
 
         post("/posto/cadastro", (request, response) -> {
@@ -91,7 +91,7 @@ public class App {
         });
 
         get("/posto/ver", (request, response) -> {
-            return App.getPage("Codigo\\bombacerta\\src\\main\\java\\com\\ti2cc\\resources\\public\\gasolina.html");
+            return App.getPage("plmg-cc-2023-2-ti2-g05-bombacerta\\src\\main\\java\\com\\ti2cc\\resources\\public\\gasolina.html");
         });
     }
 
