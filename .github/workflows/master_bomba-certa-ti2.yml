@@ -7,10 +7,6 @@ on:
   push:
     branches:
       - master
-      paths:
-        - 'plmg-cc-2023-2-ti2-g05-bombacerta/**' 
-        - 'app.settings.json'
-
   workflow_dispatch:
 
 jobs:
@@ -56,5 +52,9 @@ jobs:
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D51559884F014D88B6146295AC53BAE3 }}
           package: '*.jar'
 
-          //set port:
+
+WEBSITES_PORT: 80
+PORT: 80
+
+
 
