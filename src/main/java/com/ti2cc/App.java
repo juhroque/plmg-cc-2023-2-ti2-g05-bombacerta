@@ -111,7 +111,7 @@ public class App {
      * @param args
      */
     public static void main(String[] args) {
-       // port(1111);
+        port(8080);
 
         staticFiles.location("/public");
         
