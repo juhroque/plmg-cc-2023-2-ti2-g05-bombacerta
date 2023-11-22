@@ -53,8 +53,3 @@ jobs:
           package: '*.jar'
 
 
-WEBSITES_PORT: 80
-PORT: 80
-
-
-
