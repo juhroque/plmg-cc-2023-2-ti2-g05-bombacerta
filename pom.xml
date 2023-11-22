@@ -101,21 +101,6 @@
           <version>3.0.0</version>
         </plugin>
       </plugins>
-      <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.8.0</version> <!-- ou a versão mais recente -->
-            <configuration>
-                <source>1.8</source>
-                <target>1.8</target>
-                <encoding>UTF-8</encoding>
-                <compilerArgs>
-                    <arg>-proc:none</arg>
-                </compilerArgs>
-                <compilerArgument>-Werror</compilerArgument>
-                <directory>plmg-cc-2023-2-ti2-g05-bombacerta\Codigo\bombacerta/src</directory>
-            </configuration>
-        </plugin>
     </pluginManagement>
   </build>
 </project>
